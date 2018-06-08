@@ -1,0 +1,52 @@
+.DS_Store
+.vscode
+.idea
+.happypackDev
+*happypackDev*
+.cache*
+.happypack
+tmp
+npm-debug.log
+package-lock.json
+
+reporters
+node_modules
+./aum/node_modules
+**/dist/*
+**/_dist/*
+./reporters
+./config/config.stg.js
+config.dev.js
+.git
+
+# packages #
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+!tools/**/*.zip
+
+# logs and database #
+*.log
+*.sql
+*.sqlite
+
+# os generated files #
+.DS_Store?
+._*
+.Spotlight-v100
+.Trashes
+ehthumbs.db
+.Thumbs.db
+
+# Build Systems #
+###################
+.sass-cache
+*.css.map
+.editorconfig
+*.sublime-project
+*.sublime-workspace

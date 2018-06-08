@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}template{% endblock %}</title>
+    <link type="text/css" href="@internal/preset" rel="stylesheet">
+
+    {% include "partial/html5shiv.html" %}
+
+</head>
+<body>
+
+    {% block bodyContent %}{% endblock %}
+
+    {% block extraScripts %}{% endblock %}
+
+    {% include "partial/vendor.html" %}
+
+    {% include "partial/ready.html" %}
+
+    {% include "partial/sdc.html" %}
+</body>
+</html>
