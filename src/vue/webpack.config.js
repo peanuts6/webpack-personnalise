@@ -75,17 +75,22 @@ let config = {
             {
                 test: /\.html$/,
                 exclude: /node_modules/,
-                use: [
-                    // apply multiple loaders and options
-                    "htmllint-loader",
-                    {
-                        loader: "html-loader",
-                        options: {
-                            /* ... */
-                        }
-                    }
-                ]
+                loader: "html-loader"
             },
+            // {
+            //     test: /\.html$/,
+            //     exclude: /node_modules/,
+            //     use: [
+            //         // apply multiple loaders and options
+            //         "htmllint-loader",
+            //         {
+            //             loader: "html-loader",
+            //             options: {
+            //                 /* ... */
+            //             }
+            //         }
+            //     ]
+            // },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|eot|ttf|pkg|exe)$/,
                 exclude: /node_modules/,
