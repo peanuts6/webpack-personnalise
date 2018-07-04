@@ -17,7 +17,8 @@ if (!type) {
   console.log(`Which project type do you run?`)
   return
 }
-const webpackConfig = require("../src/" + type + "/webpack.config.js")({env:env,port:port,ssl:ssl})
+const webpackConfig = require("../src/" + type + "/webpack.config.js")
+// const webpackConfig = require("../src/" + type + "/webpack.config.js")({env:env,port:port,ssl:ssl})
 const RootStr = "./src/"+type
 const Root = path.resolve(RootStr, "")
 

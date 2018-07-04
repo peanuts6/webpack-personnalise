@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="Content-Type" content="text/html;charset=utf-8"> -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}webpack-avalon-demo{% endblock %}</title>
+    <link type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="/styles/main.css" rel="stylesheet">
+    
+    {% include "partial/html5shiv.html" %}
+</head>
+<body>
+    <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="#">
+                <svg class="d-block mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="/">Home</a>
+            <a class="py-2 d-none d-md-inline-block" href="/products/index.html">Product</a>
+            <a class="py-2 d-none d-md-inline-block" href="/products/list.html">List</a>
+            <a class="py-2 d-none d-md-inline-block" href="/products/detail.html">Detail</a>
+        </div>
+    </nav>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    {% block bodyContent %}{% endblock %}
+    </div>
+    
+    {% block extraScripts %}{% endblock %}
+
+    <!-- polyfills -->
+    {% include "partial/polyfills.html" %}
+    <!-- vendors -->
+    {% include "partial/vendor.html" %}
+    <!-- avalon ready -->
+    {% include "partial/ready.html" %}
+    <!-- statistics -->
+    {% include "partial/sdc.html" %}
+</body>
+</html>

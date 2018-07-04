@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- <meta http-equiv="Content-Type" content="text/html;charset=utf-8"> -->
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}template{% endblock %}</title>
+    <title>{% block title %}webpack-avalon-demo{% endblock %}</title>
     <link type="text/css" href="@internal/preset" rel="stylesheet">
 
     {% include "partial/html5shiv.html" %}
@@ -14,13 +15,16 @@
 <body>
 
     {% block bodyContent %}{% endblock %}
-
+    
     {% block extraScripts %}{% endblock %}
 
+    <!-- polyfills -->
+    {% include "partial/polyfills.html" %}
+    <!-- vendors -->
     {% include "partial/vendor.html" %}
-
+    <!-- avalon ready -->
     {% include "partial/ready.html" %}
-
+    <!-- statistics -->
     {% include "partial/sdc.html" %}
 </body>
 </html>

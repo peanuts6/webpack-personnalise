@@ -1,2 +1,11 @@
+{% extends "../../templates/default.html" %}
+{% block title %}demo{% endblock %}
+{% block bodyContent %}
+    {% raw %}
+    <h1>Products</h1>
+    {% endraw %}
+{% endblock %}
 
-<h1>Products</h1>
+{% block extraScripts %}
+<script src="../vendor/jquery/jquery-1.11.0.min.js"></script>
+{% endblock %}

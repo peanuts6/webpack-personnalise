@@ -1,0 +1,10 @@
+<script>
+  var scripts = []
+  !('assign' in Object) && scripts.unshift('/public/vendor/polyfills/babel-polyfill.min.js')
+  scripts.map(function (src) {
+    var scriptElement = document.createElement('script')
+    scriptElement.async = false
+    scriptElement.src = src
+    document.head.appendChild(scriptElement)
+  })
+</script>

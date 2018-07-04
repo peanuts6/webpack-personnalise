@@ -1,2 +1,10 @@
-
-<h1>Home</h1>
+{% extends "../templates/default.html" %}
+{% block title %}multipage demo{% endblock %}
+{% block bodyContent %}
+    {% raw %}
+    <h1>Home</h1>
+    {% endraw %}
+{% endblock %}
+{% block extraScripts %}
+<script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+{% endblock %}
